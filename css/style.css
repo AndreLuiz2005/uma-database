@@ -1,0 +1,154 @@
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+:root {
+    --cor-principal: #344d99;
+    --cor-secundaria: #5cbac8;
+    --cor-fundo: #f4f6fb;
+    --cor-texto: #252a34;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+.navbar {
+    background-color: var(--cor-principal) !important;
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--cor-secundaria) !important;
+}
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+main section:first-child {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+
+main section:first-child h1 {
+    color: var(--cor-principal);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-title {
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+.card-text {
+    color: #626875;
+}
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+}
+
+.btn-primary:hover {
+    background-color: #263b78;
+    border-color: #263b78;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: var(--cor-principal) !important;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 576px) {
+    main section:first-child {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+    main section:first-child h1 {
+        font-size: 2.2rem;
+    }
+}
+/* Limita as imagens dentro do conteúdo das notícias */
+.news-conteudo img {
+    display: block;
+    max-width: 100% !important;
+    max-height: 280px;
+    height: auto !important;
+    object-fit: contain;
+    margin: 12px auto;
+}
+
+/* Ícones das habilidades */
+.skill-icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 0;
+    margin: 0 auto 16px;
+}
+
+/* Quando o ícone não estiver disponível */
+.skill-icon-error {
+    background-color: #e9ecef;
+    border-radius: 12px;
+    padding: 10px;
+    color: #6c757d;
+}
+
+/* Organização do conteúdo dos cards */
+#listaSkills .card {
+    overflow-wrap: anywhere;
+}
+
+#listaSkills .card-title {
+    font-weight: 600;
+}
+
+#listaSkills p {
+    font-size: 0.9rem;
+}
