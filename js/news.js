@@ -157,7 +157,7 @@ async function carregarNews() {
     botaoBuscaNews.disabled = true;
 
     try {
-        noticias = await buscarDados("/api/v1/news/latest/10");
+        noticias = await buscarDados("/api/v1/en/news/latest/10/0");
 
         if (!Array.isArray(noticias)) {
             throw new Error("Formato de resposta inesperado.");
